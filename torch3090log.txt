@@ -1,0 +1,211 @@
+ % python torchAlbert.py
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert/albert-base-v1 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Text: I am a little confused on all of the models of the 88-89 bonnevilles.I have heard of the LE SE LSE SSE SSEI. Could someone tell me thedifferences are far as features or performance. I am also curious toknow what the book value is for prefereably the 89 model. And how muchless than book value can you usually get them for. In other words howmuch are they in demand this time of year. I have heard that the mid-springearly summer is the best time to buy.
+True Label: rec.autos
+Predicted Label: sci.space
+Prediction: Incorrect
+Text: I'm not familiar at all with the format of these X-Face:thingies, butafter seeing them in some folks' headers, I've *got* to *see* them (andmaybe make one of my own)!I've got dpg-viewon my Linux box (which displays uncompressed X-Faces)and I've managed to compile [un]compface too... but now that I'm *looking*for them, I can't seem to find any X-Face:'s in anyones news headers!  :-(Could you, would you, please send me your X-Face:headerI know* I'll probably get a little swamped, but I can handle it.	...I hope.
+True Label: comp.windows.x
+Predicted Label: sci.space
+Prediction: Incorrect
+Text: In a word, yes.
+True Label: alt.atheism
+Predicted Label: sci.space
+Prediction: Incorrect
+Text: They were attacking the Iraqis to drive them out of Kuwait,a country whose citizens have close blood and business tiesto Saudi citizens.  And me thinks if the US had not helped outthe Iraqis would have swallowed Saudi Arabia, too (or at least the eastern oilfields).  And no Muslim country was doingmuch of anything to help liberate Kuwait and protect SaudiArabia; indeed, in some masses of citizens were demonstratingin favor of that butcher Saddam (who killed lotsa Muslims),just because he was killing, raping, and looting relativelyrich Muslims and also thumbing his nose at the West.So how would have *you* defended Saudi Arabia and rolledback the Iraqi invasion, were you in charge of Saudi Arabia???I think that it is a very good idea to not have governments have anofficial religion (de facto or de jure), because with human naturelike it is, the ambitious and not the pious will always be theones who rise to power.  There are just too many people in thisworld (or any country) for the citizens to really know if a leader is really devout or if he is just a slick operator.You make it sound like these guys are angels, Ilyess.  (In yourclarinet posting you edited out some stuff; was it the following???)Friday's New York Times reported that this group definitely ismore conservative than even Sheikh Baz and his followers (whothink that the House of Saud does not rule the country conservativelyenough).  The NYT reported that, besides complaining that thegovernment was not conservative enough, they have:	- asserted that the (approx. 500,000) Shiites in the Kingdom	  are apostates, a charge that under Saudi (and Islamic) law	  brings the death penalty.  	  Diplomatic guy (Sheikh bin Jibrin), isn't he Ilyess?	- called for severe punishment of the 40 or so women who	  drove in public a while back to protest the ban on	  women driving.  The guy from the group who said this,	  Abdelhamoud al-Toweijri, said that these women should	  be fired from their jobs, jailed, and branded as	  prostitutes.	  Is this what you want to see happen, Ilyess?  I've	  heard many Muslims say that the ban on women driving	  has no basis in the Qur'an, the ahadith, etc.	  Yet these folks not only like the ban, they want	  these women falsely called prostitutes?  	  If I were you, I'd choose my heroes wisely,	  Ilyess, not just reflexively rally behind	  anyone who hates anyone you hate.	- say that women should not be allowed to work.	- say that TV and radio are too immoral in the Kingdom.Now, the House of Saud is neither my least nor my most favorite governmenton earth; I think they restrict religious and political reedom a lot, amongother things.  I just think that the most likely replacementsfor them are going to be a lot worse for the citizens of the country.But I think the House of Saud is feeling the heat lately.  In thelast six months or so I've read there have been stepped up harassingby the muttawain (religious police---*not* government) of Western womennot fully veiled (something stupid for women to do, IMO, because itsends the wrong signals about your morality).  And I've read thatthey've cracked down on the few, home-based expartiate religiousgatherings, and even posted rewards in (government-owned) newspapersoffering money for anyone who turns in a group of expartiates whodare worship in their homes or any other secret place. So thegovernment has grown even more intolerant to try to take some ofthe wind out of the sails of the more-conservative opposition.As unislamic as some of these things are, they're just a smalltaste of what would happen if these guys overthrow the House ofSaud, like they're trying to in the long run.Is this really what you (and Rached and others in the generalwest-is-evil-zionists-rule-hate-west-or-you-are-a-puppet crowd)want, Ilyess?
+True Label: talk.politics.mideast
+Predicted Label: sci.space
+Prediction: Incorrect
+Repo card metadata block was not found. Setting CardData to empty.
+dataset: DatasetDict({
+    train: Dataset({
+        features: ['text', 'label', 'label_text'],
+        num_rows: 11314
+    })
+    test: Dataset({
+        features: ['text', 'label', 'label_text'],
+        num_rows: 7532
+    })
+})
+encoded_dataset: DatasetDict({
+    train: Dataset({
+        features: ['text', 'label', 'label_text', 'input_ids', 'token_type_ids', 'attention_mask'],
+        num_rows: 11314
+    })
+    test: Dataset({
+        features: ['text', 'label', 'label_text', 'input_ids', 'token_type_ids', 'attention_mask'],
+        num_rows: 7532
+    })
+})
+train_dataset: Dataset({
+    features: ['text', 'label', 'label_text', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 11314
+})
+eval_dataset: Dataset({
+    features: ['text', 'label', 'label_text', 'input_ids', 'token_type_ids', 'attention_mask'],
+    num_rows: 7532
+})
+eval_dataset[0]: {'label': tensor(7), 'input_ids': tensor([    2,    31,   589,    21,   265,  4230,    27,    65,    16,    14,
+         2761,    16,    14,  8746,     8,  3877,    13, 14449,  1125,    18,
+            9,    31,    57,   752,    16,    14,  1009,  1353,   644,   870,
+           13,  9557,    13,    18, 10740,     9,   110,   737,   494,    55,
+           14,  4921,    50,   463,    28,   967,    54,   956,     9,    31,
+          589,    67,  7686,    20,   143,    98,    14,   360,  1923,    25,
+           26,  6369,    62,  4801,    14,  9787,  1061,     9,    17,   184,
+          212,   787,   119,   360,  1923,    92,    42,   951,   164,   105,
+           26,     9,    19,    89,   715,   184,   212,    50,    59,    19,
+         3888,    48,    85,    16,   159,     9,    31,    57,   752,    30,
+           14,   907,     8, 15827,   274,   697,    25,    14,   246,    85,
+           20,  3034,     9,     3,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0]), 'attention_mask': tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0])}
+/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/transformers/training_args.py:1594: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/home/houbosen/mindspore/Albert/torchAlbert.py:119: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+  0%|                                                                                                                                                            | 0/531 [00:00<?, ?it/s]/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 3.0684, 'grad_norm': 4.332300662994385, 'learning_rate': 1.962335216572505e-05, 'epoch': 0.06}                                                                                  
+{'loss': 3.0048, 'grad_norm': 6.463586807250977, 'learning_rate': 1.9246704331450095e-05, 'epoch': 0.11}                                                                                 
+{'loss': 2.9277, 'grad_norm': 5.507169723510742, 'learning_rate': 1.8870056497175144e-05, 'epoch': 0.17}                                                                                 
+{'loss': 2.8381, 'grad_norm': 5.73775053024292, 'learning_rate': 1.849340866290019e-05, 'epoch': 0.23}                                                                                   
+{'loss': 2.6725, 'grad_norm': 6.468252658843994, 'learning_rate': 1.8116760828625237e-05, 'epoch': 0.28}                                                                                 
+{'loss': 2.5384, 'grad_norm': 6.999246120452881, 'learning_rate': 1.7740112994350286e-05, 'epoch': 0.34}                                                                                 
+{'loss': 2.3379, 'grad_norm': 6.52292537689209, 'learning_rate': 1.736346516007533e-05, 'epoch': 0.4}                                                                                    
+{'loss': 2.1478, 'grad_norm': 7.984005928039551, 'learning_rate': 1.698681732580038e-05, 'epoch': 0.45}                                                                                  
+{'loss': 2.0861, 'grad_norm': 9.20682430267334, 'learning_rate': 1.6610169491525424e-05, 'epoch': 0.51}                                                                                  
+{'loss': 1.9799, 'grad_norm': 7.014285564422607, 'learning_rate': 1.6233521657250472e-05, 'epoch': 0.56}                                                                                 
+{'loss': 1.8587, 'grad_norm': 9.759169578552246, 'learning_rate': 1.5856873822975518e-05, 'epoch': 0.62}                                                                                 
+{'loss': 1.855, 'grad_norm': 10.163846015930176, 'learning_rate': 1.5480225988700566e-05, 'epoch': 0.68}                                                                                 
+{'loss': 1.741, 'grad_norm': 8.0917329788208, 'learning_rate': 1.5103578154425613e-05, 'epoch': 0.73}                                                                                    
+{'loss': 1.6496, 'grad_norm': 10.61904525756836, 'learning_rate': 1.4726930320150661e-05, 'epoch': 0.79}                                                                                 
+{'loss': 1.6242, 'grad_norm': 12.733677864074707, 'learning_rate': 1.4350282485875708e-05, 'epoch': 0.85}                                                                                
+{'loss': 1.5829, 'grad_norm': 11.346435546875, 'learning_rate': 1.3973634651600753e-05, 'epoch': 0.9}                                                                                    
+{'loss': 1.507, 'grad_norm': 18.506608963012695, 'learning_rate': 1.3596986817325801e-05, 'epoch': 0.96}                                                                                 
+{'eval_loss': 1.51433265209198, 'eval_runtime': 18.6628, 'eval_samples_per_second': 403.583, 'eval_steps_per_second': 6.323, 'epoch': 1.0}                                               
+ 33%|████████████████████████████████████████████████▋                                                                                                 | 177/531 [01:20<01:37,  3.63it/s/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 1.4178, 'grad_norm': 10.967150688171387, 'learning_rate': 1.3220338983050848e-05, 'epoch': 1.02}                                                                                
+{'loss': 1.4531, 'grad_norm': 11.0457763671875, 'learning_rate': 1.2843691148775897e-05, 'epoch': 1.07}                                                                                  
+{'loss': 1.4092, 'grad_norm': 11.022222518920898, 'learning_rate': 1.2467043314500942e-05, 'epoch': 1.13}                                                                                
+{'loss': 1.3858, 'grad_norm': 12.472274780273438, 'learning_rate': 1.209039548022599e-05, 'epoch': 1.19}                                                                                 
+{'loss': 1.3912, 'grad_norm': 8.730184555053711, 'learning_rate': 1.1713747645951037e-05, 'epoch': 1.24}                                                                                 
+{'loss': 1.3283, 'grad_norm': 10.319297790527344, 'learning_rate': 1.1337099811676084e-05, 'epoch': 1.3}                                                                                 
+{'loss': 1.3473, 'grad_norm': 14.731222152709961, 'learning_rate': 1.096045197740113e-05, 'epoch': 1.36}                                                                                 
+{'loss': 1.2638, 'grad_norm': 11.540626525878906, 'learning_rate': 1.0583804143126177e-05, 'epoch': 1.41}                                                                                
+{'loss': 1.3615, 'grad_norm': 12.578227996826172, 'learning_rate': 1.0207156308851226e-05, 'epoch': 1.47}                                                                                
+{'loss': 1.2408, 'grad_norm': 8.594930648803711, 'learning_rate': 9.830508474576272e-06, 'epoch': 1.53}                                                                                  
+{'loss': 1.2574, 'grad_norm': 10.836206436157227, 'learning_rate': 9.453860640301319e-06, 'epoch': 1.58}                                                                                 
+{'loss': 1.2494, 'grad_norm': 14.13261604309082, 'learning_rate': 9.077212806026366e-06, 'epoch': 1.64}                                                                                  
+{'loss': 1.2427, 'grad_norm': 9.081244468688965, 'learning_rate': 8.700564971751413e-06, 'epoch': 1.69}                                                                                  
+{'loss': 1.2768, 'grad_norm': 8.635560989379883, 'learning_rate': 8.323917137476461e-06, 'epoch': 1.75}                                                                                  
+{'loss': 1.236, 'grad_norm': 12.865983009338379, 'learning_rate': 7.947269303201508e-06, 'epoch': 1.81}                                                                                  
+{'loss': 1.3119, 'grad_norm': 11.858495712280273, 'learning_rate': 7.5706214689265545e-06, 'epoch': 1.86}                                                                                
+{'loss': 1.1974, 'grad_norm': 14.992812156677246, 'learning_rate': 7.193973634651601e-06, 'epoch': 1.92}                                                                                 
+{'loss': 1.2061, 'grad_norm': 9.073643684387207, 'learning_rate': 6.817325800376649e-06, 'epoch': 1.98}                                                                                  
+{'eval_loss': 1.2904508113861084, 'eval_runtime': 18.4022, 'eval_samples_per_second': 409.299, 'eval_steps_per_second': 6.412, 'epoch': 2.0}                                             
+ 67%|█████████████████████████████████████████████████████████████████████████████████████████████████▎                                                | 354/531 [02:31<00:53,  3.30it/s/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'loss': 1.2424, 'grad_norm': 9.038211822509766, 'learning_rate': 6.440677966101695e-06, 'epoch': 2.03}                                                                                  
+{'loss': 1.171, 'grad_norm': 10.963263511657715, 'learning_rate': 6.064030131826742e-06, 'epoch': 2.09}                                                                                  
+{'loss': 1.1989, 'grad_norm': 13.833099365234375, 'learning_rate': 5.68738229755179e-06, 'epoch': 2.15}                                                                                  
+{'loss': 1.0808, 'grad_norm': 10.36898136138916, 'learning_rate': 5.310734463276837e-06, 'epoch': 2.2}                                                                                   
+{'loss': 1.1111, 'grad_norm': 12.299004554748535, 'learning_rate': 4.934086629001883e-06, 'epoch': 2.26}                                                                                 
+{'loss': 1.1717, 'grad_norm': 9.107869148254395, 'learning_rate': 4.55743879472693e-06, 'epoch': 2.32}                                                                                   
+{'loss': 1.1374, 'grad_norm': 12.828573226928711, 'learning_rate': 4.180790960451978e-06, 'epoch': 2.37}                                                                                 
+{'loss': 1.1496, 'grad_norm': 11.58150577545166, 'learning_rate': 3.8041431261770245e-06, 'epoch': 2.43}                                                                                 
+{'loss': 1.1221, 'grad_norm': 12.745011329650879, 'learning_rate': 3.427495291902072e-06, 'epoch': 2.49}                                                                                 
+{'loss': 1.0484, 'grad_norm': 12.685029029846191, 'learning_rate': 3.0508474576271192e-06, 'epoch': 2.54}                                                                                
+{'loss': 1.123, 'grad_norm': 11.314242362976074, 'learning_rate': 2.674199623352166e-06, 'epoch': 2.6}                                                                                   
+{'loss': 1.0793, 'grad_norm': 12.63017749786377, 'learning_rate': 2.297551789077213e-06, 'epoch': 2.66}                                                                                  
+{'loss': 1.1685, 'grad_norm': 15.189309120178223, 'learning_rate': 1.92090395480226e-06, 'epoch': 2.71}                                                                                  
+{'loss': 1.0825, 'grad_norm': 12.580323219299316, 'learning_rate': 1.544256120527307e-06, 'epoch': 2.77}                                                                                 
+{'loss': 1.1835, 'grad_norm': 10.30152702331543, 'learning_rate': 1.167608286252354e-06, 'epoch': 2.82}                                                                                  
+{'loss': 1.0519, 'grad_norm': 10.208904266357422, 'learning_rate': 7.909604519774013e-07, 'epoch': 2.88}                                                                                 
+{'loss': 1.0824, 'grad_norm': 12.575408935546875, 'learning_rate': 4.1431261770244826e-07, 'epoch': 2.94}                                                                                
+{'loss': 1.131, 'grad_norm': 12.384394645690918, 'learning_rate': 3.766478342749529e-08, 'epoch': 2.99}                                                                                  
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 531/531 [03:24<00:00,  3.55it/s]/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'eval_loss': 1.2418314218521118, 'eval_runtime': 18.9079, 'eval_samples_per_second': 398.351, 'eval_steps_per_second': 6.241, 'epoch': 3.0}                                             
+{'train_runtime': 224.1237, 'train_samples_per_second': 151.443, 'train_steps_per_second': 2.369, 'train_loss': 1.533859713153875, 'epoch': 3.0}                                         
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 531/531 [03:44<00:00,  2.37it/s]
+/home/houbosen/anaconda3/envs/mindspore39NLP/lib/python3.9/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 118/118 [00:18<00:00,  6.28it/s]
+Evaluation results: {'eval_loss': 1.2418314218521118, 'eval_runtime': 18.937, 'eval_samples_per_second': 397.739, 'eval_steps_per_second': 6.231, 'epoch': 3.0}
+Text: I am a little confused on all of the models of the 88-89 bonnevilles.I have heard of the LE SE LSE SSE SSEI. Could someone tell me thedifferences are far as features or performance. I am also curious toknow what the book value is for prefereably the 89 model. And how muchless than book value can you usually get them for. In other words howmuch are they in demand this time of year. I have heard that the mid-springearly summer is the best time to buy.
+True Label: rec.autos
+Predicted Label: rec.autos
+Prediction: Correct
+Text: I'm not familiar at all with the format of these X-Face:thingies, butafter seeing them in some folks' headers, I've *got* to *see* them (andmaybe make one of my own)!I've got dpg-viewon my Linux box (which displays uncompressed X-Faces)and I've managed to compile [un]compface too... but now that I'm *looking*for them, I can't seem to find any X-Face:'s in anyones news headers!  :-(Could you, would you, please send me your X-Face:headerI know* I'll probably get a little swamped, but I can handle it.	...I hope.
+True Label: comp.windows.x
+Predicted Label: comp.windows.x
+Prediction: Correct
+Text: In a word, yes.
+True Label: alt.atheism
+Predicted Label: talk.religion.misc
+Prediction: Incorrect
+Text: They were attacking the Iraqis to drive them out of Kuwait,a country whose citizens have close blood and business tiesto Saudi citizens.  And me thinks if the US had not helped outthe Iraqis would have swallowed Saudi Arabia, too (or at least the eastern oilfields).  And no Muslim country was doingmuch of anything to help liberate Kuwait and protect SaudiArabia; indeed, in some masses of citizens were demonstratingin favor of that butcher Saddam (who killed lotsa Muslims),just because he was killing, raping, and looting relativelyrich Muslims and also thumbing his nose at the West.So how would have *you* defended Saudi Arabia and rolledback the Iraqi invasion, were you in charge of Saudi Arabia???I think that it is a very good idea to not have governments have anofficial religion (de facto or de jure), because with human naturelike it is, the ambitious and not the pious will always be theones who rise to power.  There are just too many people in thisworld (or any country) for the citizens to really know if a leader is really devout or if he is just a slick operator.You make it sound like these guys are angels, Ilyess.  (In yourclarinet posting you edited out some stuff; was it the following???)Friday's New York Times reported that this group definitely ismore conservative than even Sheikh Baz and his followers (whothink that the House of Saud does not rule the country conservativelyenough).  The NYT reported that, besides complaining that thegovernment was not conservative enough, they have:	- asserted that the (approx. 500,000) Shiites in the Kingdom	  are apostates, a charge that under Saudi (and Islamic) law	  brings the death penalty.  	  Diplomatic guy (Sheikh bin Jibrin), isn't he Ilyess?	- called for severe punishment of the 40 or so women who	  drove in public a while back to protest the ban on	  women driving.  The guy from the group who said this,	  Abdelhamoud al-Toweijri, said that these women should	  be fired from their jobs, jailed, and branded as	  prostitutes.	  Is this what you want to see happen, Ilyess?  I've	  heard many Muslims say that the ban on women driving	  has no basis in the Qur'an, the ahadith, etc.	  Yet these folks not only like the ban, they want	  these women falsely called prostitutes?  	  If I were you, I'd choose my heroes wisely,	  Ilyess, not just reflexively rally behind	  anyone who hates anyone you hate.	- say that women should not be allowed to work.	- say that TV and radio are too immoral in the Kingdom.Now, the House of Saud is neither my least nor my most favorite governmenton earth; I think they restrict religious and political reedom a lot, amongother things.  I just think that the most likely replacementsfor them are going to be a lot worse for the citizens of the country.But I think the House of Saud is feeling the heat lately.  In thelast six months or so I've read there have been stepped up harassingby the muttawain (religious police---*not* government) of Western womennot fully veiled (something stupid for women to do, IMO, because itsends the wrong signals about your morality).  And I've read thatthey've cracked down on the few, home-based expartiate religiousgatherings, and even posted rewards in (government-owned) newspapersoffering money for anyone who turns in a group of expartiates whodare worship in their homes or any other secret place. So thegovernment has grown even more intolerant to try to take some ofthe wind out of the sails of the more-conservative opposition.As unislamic as some of these things are, they're just a smalltaste of what would happen if these guys overthrow the House ofSaud, like they're trying to in the long run.Is this really what you (and Rached and others in the generalwest-is-evil-zionists-rule-hate-west-or-you-are-a-puppet crowd)want, Ilyess?
+True Label: talk.politics.mideast
+Predicted Label: talk.politics.mideast
+Prediction: Correct
